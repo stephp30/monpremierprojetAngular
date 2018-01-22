@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 [ngStyle]="{color:couleur}">
+    Welcome to {{ title }}!
+  </h1>
+  <p>{{getDescription()}}</p>
+
+  <div>
+    <h2>
+      {{user.name}}
+      <p>{{user.age}}</p>
+      <p>Birthday : {{user.birthday | date:'dd/MM/yyyy'}}</p>
+    </h2>
+  </div>
+
+  <button (click)="changeTitle($event)">Change title</button>
+  <button (click)="changeCouleur($event)">Change Couleur</button>
+
+  <select id="monselect" (change)="couleur = $event.target.value">
+    <option value="red">Rouge</option> 
+    <option value="green">Vert</option>
+    <option value="blue">Bleu</option>
+    <option value="yellow">Jaune</option>
+    <option value="black">Noir</option>
+  </select>
+
+<form action="">
+  <input (change)="affiche($event)">
+</form>
+
+  <pre>
+    {{user | json | uppercase}}
+  </pre> 
+
+
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+
+
+
